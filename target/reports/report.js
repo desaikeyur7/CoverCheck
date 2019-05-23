@@ -6,10 +6,6 @@ formatter.feature({
   "id": "verify-a-vehicle-exists",
   "keyword": "Feature"
 });
-formatter.before({
-  "duration": 9609713100,
-  "status": "passed"
-});
 formatter.scenario({
   "line": 7,
   "name": "As a user I can verify if a vehicle exists when I enter the vehicle registration number",
@@ -57,39 +53,33 @@ formatter.match({
   "location": "MyStepDefs.i_am_on_homepage()"
 });
 formatter.result({
-  "duration": 322850400,
+  "duration": 298029900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStepDefs.i_enter_a_valid_vehicle_registration_number()"
 });
 formatter.result({
-  "duration": 898449800,
-  "status": "passed"
+  "duration": 765600,
+  "error_message": "java.lang.NullPointerException\r\n\tat CoverCheckTest.Utils.elementDisplayed(Utils.java:25)\r\n\tat PageObjects.HomePage.userShouldBeAbleToFindCarRegistrationNumber(HomePage.java:26)\r\n\tat CoverCheckTest.MyStepDefs.i_enter_a_valid_vehicle_registration_number(MyStepDefs.java:20)\r\n\tat ✽.When I enter a valid vehicle registration number(src/test/Resources/CoverCheckTest/VerifyVehicleIsCovered.feature:9)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "MyStepDefs.i_should_be_able_to_see_if_the_vehicle_exists()"
 });
 formatter.result({
-  "duration": 53800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "MyStepDefs.i_should_be_able_to_see_the_start_date_and_time_of_the_cover()"
 });
 formatter.result({
-  "duration": 37900,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "MyStepDefs.i_should_be_able_to_see_the_date_and_time_the_cover_will_end()"
 });
 formatter.result({
-  "duration": 39800,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1696763100,
-  "status": "passed"
+  "status": "skipped"
 });
 });

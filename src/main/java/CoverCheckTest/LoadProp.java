@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class LoadProp extends BasePage {
+public class LoadProp {
 
     static Properties prop;
     static String fileName = "TestDataConfig.properties";

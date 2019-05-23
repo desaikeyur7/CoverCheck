@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 
-public class BrowserSelector extends Utils {
+public class BrowserSelector extends BasePage {
 
     /*Using LoadProp will enable to type a browserName in TestDataConfig.properties
     file so that we do not touch the code whenever we want to test on a different browser*/

@@ -1,7 +1,9 @@
 package CoverCheckTest;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import cucumber.api.Scenario;
+import org.junit.After;
+import org.junit.Before;
+
 import java.util.concurrent.TimeUnit;
 
 public class Hooks extends Utils {
@@ -24,8 +26,12 @@ public class Hooks extends Utils {
     //A method under @After will be invoked after a scenario is completed
     @After
 
-    public void tearDownBrowser(){
-
-        driver.quit();
+    @cucumber.api.java.After
+    public void tearDown(Scenario scenario) {
+        if (scenario.isFailed())
+        {
+            Utils.screenshotOfTheBrowserUsingCucumber(scenario);
+        }
+        driver.close();
     }
 }

@@ -23,18 +23,18 @@ public class HomePage extends Utils {
 
     public void userShouldBeAbleToFindCarRegistrationNumber() {
 
-        Utils.elementIsDisplayed(_pageTitle);
-        Utils.myClick(_findVehicle);
-        Utils.elementIsDisplayed(_carRegRequired);
-        Utils.myEnterText(_enterReg, loadProp.getProperty("enterReg"));
-        Utils.myClick(_findVehicle);
+        Utils.elementDisplayed(_pageTitle);
+        Utils.clickElementBy(_findVehicle);
+        Utils.elementDisplayed(_carRegRequired);
+        Utils.enterText(_enterReg, loadProp.getProperty("enterReg"));
+        Utils.clickElementBy(_findVehicle);
 
         try
         {
             Utils.assertEquals(_result, loadProp.getProperty("result"));
-            Utils.elementIsDisplayed(_coverStart);
+            Utils.elementDisplayed(_coverStart);
             Utils.getText(_coverStartDate);
-            Utils.elementIsDisplayed(_coverEnd);
+            Utils.elementDisplayed(_coverEnd);
             Utils.getText(_coverEndDate);
             System.out.println("Vehicle with registration " + loadProp.getProperty("enterReg") + " is covered.");
             present = true;
